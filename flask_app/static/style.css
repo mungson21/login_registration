@@ -1,0 +1,22 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    width: 728px;
+}
+
+#registration, #login {
+    padding: 5px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}

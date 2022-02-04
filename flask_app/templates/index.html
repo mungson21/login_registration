@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="registration">
+            <h1>Registration</h1>
+            <form action="/create_user", method="post">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <p><label for="first_name">First Name:</label>
+                <input type="text" name="first_name"></p>
+                
+                <p><label for="last_name">Last Name:</label>
+                <input type="text" name="last_name"></p>
+                
+                <p><label for="email">Email:</label>
+                <input type="text" name="email"></p>
+                
+                <!-- Place Holder for Password -->
+                <p><label for="password">Password:</label>
+                <input type="text" name="password"></p>
+
+                <p><label for="confirm_password">Confirm Password:</label>
+                    <input type="text" name="confirm_password"></p>
+        
+                <p><button>Register</button></p>
+            </form>
+        </div>
+        <div id="login">
+            <h1>Login</h1>
+            <form action="/login", method="post">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <p><label for="email">Email:</label>
+                    <input type="text" name="email"></p>
+
+                <!-- Place Holder for Password -->
+                <p><label for="password">Password:</label>
+                    <input type="text" name="password"></p>
+
+                <p><button>Login</button></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
